@@ -19,11 +19,9 @@ android {
     }
     buildTypes {
         debug {
-            buildConfigField("String", "API_BASE_URL", "\"http://yx.sealbaby.cn/\"")
             minifyEnabled false
         }
         release {
-            buildConfigField("String", "API_BASE_URL", "\"\"")
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -51,35 +49,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation deps.android.v4
     implementation deps.android.v7
-    implementation deps.android.recyclerview
-    implementation deps.android.design
-    implementation deps.android.db_room
-    implementation deps.android.paging
-    implementation deps.android.lifecycle
     implementation deps.project.lib_runtime
-    implementation deps.project.lib_ui
-    implementation deps.project.lib_util
-    implementation deps.project.lib_img_loader
-    implementation deps.project.lib_network
-    implementation deps.project.lib_cache
-    implementation deps.project.lib_webview
-    implementation deps.project.lib_scheme
-    implementation deps.project.lib_mock
-    implementation deps.project.lib_splash
-    implementation deps.project.lib_permission
-    implementation deps.project.lib_payment
-
     implementation deps.tools.butterknife
-    implementation deps.tools.chart
-    implementation deps.tools.rxjava
-    implementation deps.tools.rxandroid
-    implementation deps.tools.flowlayout
-    implementation deps.tools.matisse
-    implementation deps.tools.picker_view
-
-
     annotationProcessor deps.processor.butterknife_apt
-    annotationProcessor deps.processor.db_room_apt
-
-    debugImplementation deps.debug.debug_db
 }
