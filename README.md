@@ -3,7 +3,7 @@
 #### 使用
 
 此项目需要结合 [SimpleAndroid-Lego](https://github.com/goorich/SimpleAndroid-Lego) 运行，
-克隆 `SimpleAndroid-Lego` 到此项目根目录 `lego` 文件夹下，直接复用 `lego` 模块，将更多精力放在业务逻辑上，避免重复造轮子
+克隆 `SimpleAndroid-Lego` 到此项目根目录下，重命名为 `lego` ，可直接复用 `lego` 模块，将更多精力放在业务逻辑上，避免重复造轮子
 
 #### 代码更新
 
