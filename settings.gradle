@@ -30,30 +30,35 @@ def tools = [
         flowlayout           : "com.hyman:flowlayout-lib:${FLOW_LAYOUT_VERSION}",
         matisse              : "com.zhihu.android:matisse:${MATISSE_VERSION}",
         picker_view          : "com.contrarywind:Android-PickerView:${PICKER_VIEW_VERSION}",
-        indicator_view       : "com.romandanylyk:pageindicatorview:${INDICATOR_VIEW_VERSION}"
+        indicator_view       : "com.romandanylyk:pageindicatorview:${INDICATOR_VIEW_VERSION}",
+        auto_service         : "com.google.auto.service:auto-service:${AUTO_SERVICE_VERSION}",
+        javapoet             : "com.squareup:javapoet:${JAVAPOET_VERSION}"
 ]
 
 def project = [
-        lib_runtime   : includeProject(":lego:lib-runtime"),
-        lib_config    : includeProject(":lego:lib-config"),
-        lib_ui        : includeProject(":lego:lib-ui"),
-        lib_util      : includeProject(":lego:lib-util"),
-        lib_permission: includeProject(":lego:lib-permission"),
-        lib_img_loader: includeProject(":lego:lib-img-loader"),
-        lib_network   : includeProject(":lego:lib-network"),
-        lib_cache     : includeProject(":lego:lib-cache"),
-        lib_scheme    : includeProject(":lego:lib-scheme"),
-        lib_webview   : includeProject(":lego:lib-webview"),
-        lib_mock      : includeProject(":lego:lib-mock"),
-        lib_splash    : includeProject(":lego:lib-splash"),
-        lib_payment   : includeProject(":lego:lib-payment"),
-        lib_debug     : includeProject(":lego:lib-debug")
+        lib_runtime       : includeProject(":lego:lib-runtime"),
+        lib_config        : includeProject(":lego:lib-config"),
+        lib_ui            : includeProject(":lego:lib-ui"),
+        lib_util          : includeProject(":lego:lib-util"),
+        lib_permission    : includeProject(":lego:lib-permission"),
+        lib_img_loader    : includeProject(":lego:lib-img-loader"),
+        lib_network       : includeProject(":lego:lib-network"),
+        lib_cache         : includeProject(":lego:lib-cache"),
+        lib_scheme        : includeProject(":lego:lib-scheme"),
+        lib_webview       : includeProject(":lego:lib-webview"),
+        lib_mock          : includeProject(":lego:lib-mock"),
+        lib_splash        : includeProject(":lego:lib-splash"),
+        lib_payment       : includeProject(":lego:lib-payment"),
+        lib_debug         : includeProject(":lego:lib-debug"),
+        lib_annotation    : includeProject(":lego:lib-annotation"),
+        lib_annotation_api: includeProject(":lego:lib-annotation-api")
 ]
 
 def processor = [
         butterknife_apt: "com.jakewharton:butterknife-compiler:${BUTTER_KNIFE}",
         glide_apt      : "com.github.bumptech.glide:compiler:${GLIDE_VERSION}",
-        db_room_apt    : "android.arch.persistence.room:compiler:${DB_ROOM_VERSION}"
+        db_room_apt    : "android.arch.persistence.room:compiler:${DB_ROOM_VERSION}",
+        lego_apt       : includeProject(":lego:lib-annotation-processor")
 ]
 
 def debug = [
