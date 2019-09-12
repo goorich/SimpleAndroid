@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'com.neuqer.ioc.panga'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -55,4 +56,9 @@ dependencies {
     implementation deps.project.lib_annotation_api
     annotationProcessor deps.processor.butterknife_apt
     annotationProcessor deps.processor.lego_apt
+}
+
+pangeConfig {
+    enable true
+    debug true
 }

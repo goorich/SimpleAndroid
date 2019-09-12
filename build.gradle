@@ -1,8 +1,9 @@
 buildscript {
 
     repositories {
+        maven { url uri("$project.rootDir${LOCAL_MAVEN}") }
         mavenLocal()
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven { url 'https://jitpack.io' }
         jcenter()
@@ -10,14 +11,17 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:${GRADLE_PLUGIN_VERSION}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}"
         classpath "com.jakewharton:butterknife-gradle-plugin:${BUTTER_KNIFE}"
+        classpath "com.neuqer.gradle.plugin:panga:${PANGA_PLUGIN_VERSION}"
     }
 }
 
 allprojects {
     repositories {
+        maven { url uri("$project.rootDir${LOCAL_MAVEN}") }
         mavenLocal()
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven { url 'https://jitpack.io' }
         jcenter()
