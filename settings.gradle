@@ -2,8 +2,6 @@ include ':app'
 
 rootProject.name = "SimpleAndroid"
 
-def useSource = false
-
 def deps = [:]
 
 def android = [
@@ -55,8 +53,7 @@ def project = [
         lib_splash        : includeProject(":lego:lib-splash"),
         lib_payment       : includeProject(":lego:lib-payment"),
         lib_debug         : includeProject(":lego:lib-debug"),
-        lib_annotation    : useSource ? includeProject(":lego:lib-annotation") :
-                "com.neuqer.android:annotation:${ANNOTATION_VERSION}",
+        lib_annotation    : includeProject(":lego:lib-annotation"),
         lib_annotation_api: includeProject(":lego:lib-annotation-api")
 ]
 
@@ -80,6 +77,11 @@ def kotlin = [
         "core": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${KOTLIN_VERSION}"
 ]
 
+// 主要是Plugin插件使用
+def maven = [
+        annotation: "com.neuqer.android:annotation:${ANNOTATION_VERSION}"
+]
+
 deps.android = android
 deps.tools = tools
 deps.project = project
@@ -87,6 +89,7 @@ deps.processor = processor
 deps.debug = debug
 deps.plugin = plugin
 deps.kotlin = kotlin
+deps.maven = maven
 
 def includeProject(def projectPath) {
     include projectPath

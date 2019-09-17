@@ -18,7 +18,6 @@ package com.nequer.android;
 
 import com.nequer.android.base.BaseActivity;
 import com.neuqer.android.R;
-import com.neuqer.android.annotation.ModuleApplication;
 
 /**
  * 示例类
@@ -26,7 +25,6 @@ import com.neuqer.android.annotation.ModuleApplication;
  * @author techflowing
  * @since 2019/4/21 11:42 PM
  */
-@ModuleApplication(module = "main")
 public class MainActivity extends BaseActivity {
 
     @Override

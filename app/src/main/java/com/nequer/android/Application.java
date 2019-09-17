@@ -19,7 +19,6 @@ package com.nequer.android;
 import android.content.Context;
 
 import com.neuqer.android.BuildConfig;
-import com.neuqer.android.annotation.api.ModuleApplicationInject;
 import com.neuqer.android.runtime.AppRuntimeInit;
 
 /**
@@ -34,12 +33,11 @@ public class Application extends android.app.Application {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         AppRuntimeInit.onApplicationAttachBaseContext(this, BuildConfig.DEBUG);
-        ModuleApplicationInject.onApplicationAttachBaseContext(this);
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        ModuleApplicationInject.onApplicationCreate(this);
+        AppRuntimeInit.onApplicationCreate(this);
     }
 }

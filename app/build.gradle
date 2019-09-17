@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
-apply plugin: 'com.neuqer.ioc.panga'
+apply plugin: 'com.neuqer.panga'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
