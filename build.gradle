@@ -14,6 +14,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}"
         classpath "com.jakewharton:butterknife-gradle-plugin:${BUTTER_KNIFE}"
         classpath "com.neuqer.gradle.plugin:panga:${PANGA_PLUGIN_VERSION}"
+        classpath "com.neuqer.gradle.plugin:gather:${GATHER_PLUGIN_VERSION}"
     }
 }
 

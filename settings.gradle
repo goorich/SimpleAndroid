@@ -70,7 +70,8 @@ def debug = [
 ]
 
 def plugin = [
-        ioc_di: includeProject(":lego:gradle-plugins:panga")
+        panga : includeProject(":lego:gradle-plugins:panga"),
+        gather: includeProject(":lego:gradle-plugins:gather")
 ]
 
 def kotlin = [
@@ -79,7 +80,7 @@ def kotlin = [
 
 // 主要是Plugin插件使用
 def maven = [
-        annotation: "com.neuqer.android:annotation:${ANNOTATION_VERSION}"
+        annotation: "com.neuqer.android:annotation:${ANNOTATION_VERSION}",
 ]
 
 deps.android = android
